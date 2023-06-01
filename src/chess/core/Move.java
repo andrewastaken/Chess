@@ -1,7 +1,7 @@
 package chess.core;
 
 /*
- * Representation of a move
+ * A Move is a representation of a move
  */
 public class Move {
     // the starting and ending coords of the move
@@ -48,14 +48,14 @@ public class Move {
     }
 
     public void undo(Board b) {
-        Piece[][] board = b.getBoard();
+        //Piece[][] board = b.getBoard();
     }
 
     @Override
     public String toString() {
-        String type = Constants.PIECE_NAMES[movingPiece.getType()];
-        String start = Constants.X_COORDS[x1] + (y1 + 1);
-        String end = Constants.X_COORDS[x2] + (y2 + 1);
+        String type = Piece.ABBREVIATIONS[movingPiece.getType()];
+        String start = String.valueOf((char)(x1 + '0')) + (y1 + 1);
+        String end = String.valueOf((char)(x2 + '0')) + (y2 + 1);
         String eat = (eatenPiece == null) ? "" : "x";
         return type + start + eat + end;
     }
