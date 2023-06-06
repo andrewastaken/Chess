@@ -116,7 +116,7 @@ public class Board {
     }
 
     /**
-     * @return The 2d array that represents the board
+     * @return The 2d array that represents the board.
      */
     public Piece[][] getBoard() {
         return board;
